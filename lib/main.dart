@@ -35,7 +35,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       body: Center(
-        child: Text("Initial Data"),
+        child: Text(
+          "Yet to be initialized",
+          style: Theme.of(context).textTheme.title,
+        ),
       ),
     );
   }
