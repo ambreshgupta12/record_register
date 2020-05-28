@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       //Dark theme data: ""values/theme_data""
       darkTheme: darkTheme(),
 
-      home: MyHomePage(),
+      home: MyHomePage(), // Change this value to test a layout..
     );
   }
 }
