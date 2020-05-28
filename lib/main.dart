@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:record_register/values/theme_data.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,40 +11,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false, // Disable the top right corner debug sign
       title: 'Record Register',
 
-      // Light theme data
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        primaryColor: Colors.white,
-        primaryColorDark: Color(0xFAFAFAFA),
-        backgroundColor: Colors.white,
-        primaryIconTheme: IconThemeData(
-          color: Colors.black87,
-        ),
-        textTheme: TextTheme(
-            subhead: TextStyle(
-              color: Colors.black,
-            ),
-            title: TextStyle(
-              color: Colors.black,
-            )),
-      ),
-
-      //Dark theme data
-      darkTheme: ThemeData(
-        primaryColor: Colors.black,
-        backgroundColor: Colors.black,
-        primaryColorDark: Color(0xFF151515),
-        primaryIconTheme: IconThemeData(
-          color: Colors.white70,
-        ),
-        textTheme: TextTheme(
-            subhead: TextStyle(
-              color: Color(0xf1f1f1f1),
-            ),
-            title: TextStyle(
-              color: Color(0xf1f1f1f1),
-            )),
-      ),
+      // Light theme data: "values/theme_data"
+      theme: lightTheme(),
+      //Dark theme data: ""values/theme_data""
+      darkTheme: darkTheme(),
 
       home: MyHomePage(),
     );
