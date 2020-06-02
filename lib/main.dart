@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:record_register/initial_sceens/select_stu_teach.dart';
 import 'package:record_register/initial_sceens/signin.dart';
 import 'package:record_register/initial_sceens/signup.dart';
 import 'package:record_register/values/theme_data.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       //Dark theme data: ""values/theme_data""
       darkTheme: darkTheme(),
 
-      home: SignUp() // Change this value to test a layout..
+      home: SelectST() // Change this value to test a layout..
     );
   }
 }
