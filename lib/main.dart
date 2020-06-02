@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:record_register/initial_sceens/signin.dart';
+import 'package:record_register/initial_sceens/signup.dart';
 import 'package:record_register/values/theme_data.dart';
 
 void main() => runApp(MyApp());
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
       //Dark theme data: ""values/theme_data""
       darkTheme: darkTheme(),
 
-      home: MyHomePage(), // Change this value to test a layout..
+      home: SignUp() // Change this value to test a layout..
     );
   }
 }
