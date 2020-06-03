@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 ThemeData lightTheme() {
   return ThemeData(
     primarySwatch: Colors.blue,
-    primaryColor: Colors.white,
+    primaryColor: Color(0xff2297F4),
     primaryColorDark: Color(0xFAFAFAFA),
     backgroundColor: Colors.white,
     primaryIconTheme: IconThemeData(
@@ -16,6 +16,7 @@ ThemeData lightTheme() {
         title: TextStyle(
           color: Colors.black,
         )),
+        buttonColor: Colors.white
   );
 }
 
