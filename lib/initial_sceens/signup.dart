@@ -62,9 +62,7 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     changeTheme(context);
-    return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
-      body: SingleChildScrollView(
+    return SingleChildScrollView(
         child: Column(
           children: <Widget>[
             SizedBox(height: 32),
@@ -92,7 +90,7 @@ class _SignUpState extends State<SignUp> {
                   "Sign Up",
                   style: Theme.of(context)
                       .textTheme
-                      .headline
+                      .headline5
                       .copyWith(fontWeight: FontWeight.w700),
                 )),
             Padding(
@@ -142,7 +140,7 @@ class _SignUpState extends State<SignUp> {
                           ),
                           labelStyle: Theme.of(context)
                               .textTheme
-                              .subhead
+                              .subtitle1
                               .copyWith(color: Colors.black54),
                           errorText: _isNameEmpty
                               ? "Please enter a user name"
@@ -213,7 +211,7 @@ class _SignUpState extends State<SignUp> {
                           ),
                           labelStyle: Theme.of(context)
                               .textTheme
-                              .subhead
+                              .subtitle1
                               .copyWith(color: Colors.black54),
                           errorText: _isEmailEmpty
                               ? "Please enter valid email address"
@@ -300,7 +298,7 @@ class _SignUpState extends State<SignUp> {
                           ),
                           labelStyle: Theme.of(context)
                               .textTheme
-                              .subhead
+                              .subtitle1
                               .copyWith(color: Colors.black54),
                           errorText: _isPasswordEmpty
                               ? "Please enter valid password"
@@ -378,7 +376,7 @@ class _SignUpState extends State<SignUp> {
                           ),
                           labelStyle: Theme.of(context)
                               .textTheme
-                              .subhead
+                              .subtitle1
                               .copyWith(color: Colors.black54),
                           errorText: _isConfirmPasswordEmpty
                               ? "Passwords do not match"
@@ -512,7 +510,7 @@ class _SignUpState extends State<SignUp> {
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(2),
                                     color: _circularProgress2 != null
-                                        ? Theme.of(context).primaryColor
+                                        ? Theme.of(context).backgroundColor
                                         : Colors.transparent,
                                     boxShadow: [
                                       BoxShadow(
@@ -625,7 +623,6 @@ class _SignUpState extends State<SignUp> {
                 ))
           ],
         ),
-      ),
-    );
+      );
   }
 }

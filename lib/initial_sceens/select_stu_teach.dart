@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 class SelectST extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).backgroundColor,
-      body: SingleChildScrollView(
+    return SingleChildScrollView(
         child: Column(
           children: <Widget>[
             SizedBox(
@@ -21,7 +19,7 @@ class SelectST extends StatelessWidget {
                   "Welcome",
                   style: Theme.of(context)
                       .textTheme
-                      .headline
+                      .headline5
                       .copyWith(fontWeight: FontWeight.w600),
                 ),
               ),
@@ -33,7 +31,7 @@ class SelectST extends StatelessWidget {
                 "Chose how you want to use this app, whether as a student or teacher.",
                 style: Theme.of(context)
                     .textTheme
-                    .subhead
+                    .subtitle1
                     .copyWith(color: Colors.black54),
                 softWrap: true,
                 textAlign: TextAlign.center,
@@ -42,7 +40,7 @@ class SelectST extends StatelessWidget {
             Row(children: <Widget>[
               Expanded(
                 child: Padding(
-                  padding: EdgeInsets.only(left: 62, right: 62, bottom: 16),
+                  padding: EdgeInsets.only(left: 62, right: 62, bottom: 8),
                   child: MaterialButton(
                     onPressed: () {},
                     elevation: 2,
@@ -92,7 +90,7 @@ class SelectST extends StatelessWidget {
             Row(children: <Widget>[
               Expanded(
                 child: Padding(
-                  padding: EdgeInsets.only(top: 16, left: 62, right: 62, bottom: 16),
+                  padding: EdgeInsets.only(top: 8, left: 62, right: 62, bottom: 16),
                   child: MaterialButton(
                     onPressed: () {},
                     elevation: 2,
@@ -117,7 +115,6 @@ class SelectST extends StatelessWidget {
 
           ],
         ),
-      ),
-    );
+      );
   }
 }

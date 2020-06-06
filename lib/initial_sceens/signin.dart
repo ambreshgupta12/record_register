@@ -35,9 +35,7 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     changeTheme(context);
-    return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
-      body: SingleChildScrollView(
+    return SingleChildScrollView(
         child: Column(
           children: <Widget>[
             SizedBox(height: 32),
@@ -65,7 +63,7 @@ class _SignInState extends State<SignIn> {
                   "Sign In",
                   style: Theme.of(context)
                       .textTheme
-                      .headline
+                      .headline5
                       .copyWith(fontWeight: FontWeight.w700),
                 )),
             Padding(
@@ -112,7 +110,7 @@ class _SignInState extends State<SignIn> {
                           ),
                           labelStyle: Theme.of(context)
                               .textTheme
-                              .subhead
+                              .subtitle1
                               .copyWith(color: Colors.black54),
                           errorText: _isEmailEmpty
                               ? "Please enter valid email address"
@@ -215,7 +213,7 @@ class _SignInState extends State<SignIn> {
                             ),
                             labelStyle: Theme.of(context)
                                 .textTheme
-                                .subhead
+                                .subtitle1
                                 .copyWith(color: Colors.black54),
                             errorText: _isPasswordEmpty
                                 ? "Please enter valid password"
@@ -332,7 +330,7 @@ class _SignInState extends State<SignIn> {
                         height: 48,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(2),
-                            color: Theme.of(context).primaryColor,
+                            color: Theme.of(context).backgroundColor,
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.grey,
@@ -421,7 +419,6 @@ class _SignInState extends State<SignIn> {
                 ))
           ],
         ),
-      ),
-    );
+      );
   }
 }

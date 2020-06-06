@@ -4,16 +4,16 @@ ThemeData lightTheme() {
   return ThemeData(
     primarySwatch: Colors.blue,
     primaryColor: Color(0xff2297F4),
-    primaryColorDark: Color(0xFAFAFAFA),
+    primaryColorDark: Colors.black12,
     backgroundColor: Colors.white,
     primaryIconTheme: IconThemeData(
       color: Colors.black87,
     ),
     textTheme: TextTheme(
-        subhead: TextStyle(
+        subtitle1: TextStyle(
           color: Colors.black,
         ),
-        title: TextStyle(
+        headline6: TextStyle(
           color: Colors.black,
         )),
         buttonColor: Colors.white
@@ -24,15 +24,15 @@ ThemeData darkTheme() {
   return ThemeData(
     primaryColor: Colors.black,
     backgroundColor: Colors.black,
-    primaryColorDark: Color(0xFF151515),
+    primaryColorDark: Colors.white12,
     primaryIconTheme: IconThemeData(
       color: Colors.white70,
     ),
     textTheme: TextTheme(
-        subhead: TextStyle(
+        subtitle1: TextStyle(
           color: Color(0xf1f1f1f1),
         ),
-        title: TextStyle(
+        headline6: TextStyle(
           color: Color(0xf1f1f1f1),
         )),
   );

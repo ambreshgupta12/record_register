@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:record_register/initial_sceens/select_stu_teach.dart';
 import 'package:record_register/initial_sceens/signin.dart';
 import 'package:record_register/initial_sceens/signup.dart';
+import 'package:record_register/teacher_side/t_home_page.dart';
 import 'package:record_register/values/theme_data.dart';
 
 void main() => runApp(MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       //Dark theme data: ""values/theme_data""
       darkTheme: darkTheme(),
 
-      home: SelectST() // Change this value to test a layout..
+      home: MyHomePage()
     );
   }
 }
@@ -31,23 +32,24 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  final PageStorageBucket _bucket = PageStorageBucket();
+
   @override
   Widget build(BuildContext context) {
 
     changeTheme(context); // Works with system dark / light mode setting
 
     return Scaffold(
-      body: Center(
-        child: Text(
-          "Yet to be initialized",
-          style: Theme.of(context).textTheme.title,
-        ),
-      ),
+      backgroundColor: Theme.of(context).backgroundColor,
+      body: PageStorage(
+        bucket: _bucket,
+         child: HomePageT(), // Change this value to test a layout..
+      )
     );
   }
 }
 
-void changeTheme(BuildContext context) {
+void changeTheme(BuildContext context){
   //Toggle light / dark mode theme according to system setting
   if (MediaQuery.of(context).platformBrightness == Brightness.light) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
