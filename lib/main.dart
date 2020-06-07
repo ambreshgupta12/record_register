@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       //Dark theme data: ""values/theme_data""
       darkTheme: darkTheme(),
 
-      home: MyHomePage()
+      home: MyHomePage() // DO NOT CHANGE ANYTHING OVER HERE... [Use line 46 to change the layout]
     );
   }
 }

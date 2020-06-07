@@ -4,10 +4,11 @@ ThemeData lightTheme() {
   return ThemeData(
     primarySwatch: Colors.blue,
     primaryColor: Color(0xff2297F4),
-    primaryColorDark: Colors.black12,
+    // primaryColorDark: Color(0xfffafafa),
+    primaryColorDark: Color(0xfff3f3f3),
     backgroundColor: Colors.white,
     primaryIconTheme: IconThemeData(
-      color: Colors.black87,
+      color: Colors.black54,
     ),
     textTheme: TextTheme(
         subtitle1: TextStyle(
@@ -15,14 +16,19 @@ ThemeData lightTheme() {
         ),
         headline6: TextStyle(
           color: Colors.black,
-        )),
+        ),
+        headline5: TextStyle(
+          // color: Colors.black54,
+          fontWeight: FontWeight.w500
+        )
+    ),
         buttonColor: Colors.white
   );
 }
 
 ThemeData darkTheme() {
   return ThemeData(
-    primaryColor: Colors.black,
+    primaryColor: Color(0xff2297F4),
     backgroundColor: Colors.black,
     primaryColorDark: Colors.white12,
     primaryIconTheme: IconThemeData(
