@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:record_register/teacher_side/home_page_components/assignments.dart';
 import 'package:record_register/teacher_side/home_page_components/dashboard.dart';
 import 'package:record_register/teacher_side/home_page_components/header.dart';
 import 'package:record_register/values/flutter_icons_data.dart';
@@ -86,6 +87,7 @@ class _HomePageTState extends State<HomePageT> {
                         Header(
                             "PKTYR2020", "28"), // HEader file initialized here
                         Dashboard(4, 10),
+                        Assignments()
                       ]),
                 ),
               ),

@@ -29,8 +29,8 @@ class Dashboard extends StatelessWidget {
                 ),
             child: Container(
               color: Theme.of(context).primaryColor,
-              width: 250,
-              height: 200,
+              width: 235,
+              height: 180,
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -76,7 +76,7 @@ class Dashboard extends StatelessWidget {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 16),
                                     child: Text(
-                                      "$submittedAssignment / $totalAssignment",
+                                      "Submission: $submittedAssignment / $totalAssignment",
                                       style: Theme.of(context)
                                           .textTheme
                                           .bodyText1
@@ -123,8 +123,8 @@ class Dashboard extends StatelessWidget {
                   ),
               child: Container(
                 color: Theme.of(context).primaryColor.withOpacity(0.6),
-                width: 250,
-                height: 200,
+                width: 235,
+                height: 180,
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -156,6 +156,7 @@ class Dashboard extends StatelessWidget {
                               padding: EdgeInsets.all(16),
                               child: NeumorphicSwitch(
                                 height: 24,
+                                value: false,
                                 onChanged: (bool onlineClassSwitch) {},
                                 style: NeumorphicSwitchStyle(),
                               ),
