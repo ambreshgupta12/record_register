@@ -43,7 +43,7 @@ class Header extends StatelessWidget {
               style: NeumorphicStyle(
                   boxShape: NeumorphicBoxShape.circle(),
                   shape: NeumorphicShape.concave,
-                  color: Theme.of(context).backgroundColor
+                  color: Theme.of(context).primaryColorDark
               ),
               child: ClipOval(
                   clipper: ProfileClipper(),

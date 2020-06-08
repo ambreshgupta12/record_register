@@ -53,9 +53,9 @@ void changeTheme(BuildContext context){
   //Toggle light / dark mode theme according to system setting
   if (MediaQuery.of(context).platformBrightness == Brightness.light) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
-      statusBarColor: Color(0xDCDCDCDC).withOpacity(1),
+      statusBarColor: Color(0xffe0e5ec).withOpacity(1),
       statusBarIconBrightness: Brightness.dark,
-      systemNavigationBarColor: Color(0xFAFAFAFA),
+      systemNavigationBarColor: Color(0xffe0e5ec),
       systemNavigationBarIconBrightness: Brightness.dark,
     ));
   } else {

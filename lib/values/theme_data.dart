@@ -4,8 +4,9 @@ ThemeData lightTheme() {
   return ThemeData(
     primarySwatch: Colors.blue,
     primaryColor: Color(0xff2297F4),
-    // primaryColorDark: Color(0xfffafafa),
-    primaryColorDark: Color(0xfff3f3f3),
+    primaryColorLight: Color(0xffebf0f7), // change it to some light color
+    primaryColorDark: Color(0xffe0e5ec),
+    // primaryColorDark: Color(0xfff3f3f3),
     backgroundColor: Colors.white,
     primaryIconTheme: IconThemeData(
       color: Colors.black54,
@@ -19,7 +20,8 @@ ThemeData lightTheme() {
         ),
         headline5: TextStyle(
           // color: Colors.black54,
-          fontWeight: FontWeight.w500
+          color: Colors.black54,
+          fontWeight: FontWeight.w600
         )
     ),
         buttonColor: Colors.white
