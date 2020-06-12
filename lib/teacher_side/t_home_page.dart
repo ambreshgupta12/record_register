@@ -5,7 +5,6 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:record_register/teacher_side/home_page_components/assignments.dart';
 import 'package:record_register/teacher_side/home_page_components/dashboard.dart';
 import 'package:record_register/teacher_side/home_page_components/header.dart';
-import 'package:record_register/values/flutter_icons_data.dart';
 import 'package:record_register/values/profile_clipper.dart';
 
 class HomePageT extends StatefulWidget {
@@ -21,49 +20,62 @@ class _HomePageTState extends State<HomePageT> {
     return SafeArea(
       child: Row(
         children: <Widget>[
-          NavigationRail(
-            elevation: 1,
-            backgroundColor: Theme.of(context).primaryColorLight,
-            minWidth: 64,
-            selectedIndex: _selectedIndex,
-            onDestinationSelected: (int index) {
-              setState(() {
-                _selectedIndex = index;
-              });
-            },
-            leading: IconButton(
-              icon: NeumorphicIcon(
-                CupertinoIcons.person_solid, // change icon to third party Icon.
-                style: NeumorphicStyle(
-                    color: Theme.of(context).primaryIconTheme.color),
-                size: 32,
+
+          // Nav rail
+          LayoutBuilder(builder: (context, constraint) {
+            return SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(minHeight: constraint.maxHeight),
+                child: IntrinsicHeight(
+                  child: NavigationRail(
+                    elevation: 1,
+                    backgroundColor: Theme.of(context).primaryColorLight,
+                    minWidth: 64,
+                    selectedIndex: _selectedIndex,
+                    onDestinationSelected: (int index) {
+                      setState(() {
+                        _selectedIndex = index;
+                      });
+                    },
+                    leading: IconButton(
+                      icon: NeumorphicIcon(
+                        CupertinoIcons
+                            .person_solid, // change icon to third party Icon.
+                        style: NeumorphicStyle(
+                            color: Theme.of(context).primaryIconTheme.color),
+                        size: 32,
+                      ),
+                      // icon: Icon(
+                      //   CupertinoIcons.person_solid,
+                      //   size: 32,
+                      // ), // change icon to third party Icon.
+                      color: Theme.of(context).primaryIconTheme.color,
+                      onPressed: () {},
+                    ),
+                    trailing: IconButton(
+                      icon: NeumorphicIcon(
+                        Icons.add, // change icon to third party Icon.
+                        style: NeumorphicStyle(
+                            color: Theme.of(context).primaryIconTheme.color),
+                        size: 32,
+                      ),
+                      color: Theme.of(context).primaryIconTheme.color,
+                      onPressed: () {},
+                    ),
+                    labelType: NavigationRailLabelType.none,
+                    destinations: [
+                      // Static for now! Would gonna fetch the number of elements from firebase
+                      // image url and label is also user based...
+                      navRailElement("images/googleLogo.png", "first"),
+                      navRailElement("images/googleLogo.png", "second"),
+                      navRailElement("images/googleLogo.png", "third"),
+                    ],
+                  ),
+                ),
               ),
-              // icon: Icon(
-              //   CupertinoIcons.person_solid,
-              //   size: 32,
-              // ), // change icon to third party Icon.
-              color: Theme.of(context).primaryIconTheme.color,
-              onPressed: () {},
-            ),
-            trailing: IconButton(
-              icon: NeumorphicIcon(
-                Icons.add, // change icon to third party Icon.
-                style: NeumorphicStyle(
-                    color: Theme.of(context).primaryIconTheme.color),
-                size: 32,
-              ),
-              color: Theme.of(context).primaryIconTheme.color,
-              onPressed: () {},
-            ),
-            labelType: NavigationRailLabelType.none,
-            destinations: [
-              // Static for now! Would gonna fetch the number of elements from firebase
-              // image url and label is also user based...
-              navRailElement("images/googleLogo.png", "first"),
-              navRailElement("images/googleLogo.png", "second"),
-              navRailElement("images/googleLogo.png", "third"),
-            ],
-          ),
+            );
+          }),
+          //
           VerticalDivider(
             thickness: 0.8,
             width: 1,
@@ -72,8 +84,8 @@ class _HomePageTState extends State<HomePageT> {
           Expanded(
             child: Neumorphic(
               style: NeumorphicStyle(
-                  depth: -2, 
-                  boxShape: NeumorphicBoxShape.rect(),
+                depth: -2,
+                boxShape: NeumorphicBoxShape.rect(),
               ),
               child: Container(
                 color: Theme.of(context)
@@ -111,8 +123,7 @@ NavigationRailDestination navRailElement(String icon, String label) {
         clipper: ProfileClipper(),
         child: Opacity(
             opacity: 1,
-            child: Image.asset(icon, fit: BoxFit.cover, height: 40)
-        ),
+            child: Image.asset(icon, fit: BoxFit.cover, height: 40)),
       ),
     ),
     icon: Neumorphic(
